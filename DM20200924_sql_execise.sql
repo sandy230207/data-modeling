@@ -9,7 +9,7 @@ CREATE TABLE department (
 	name varchar(100) NOT NULL,
 	cog_id int(11) NOT NULL,
 	PRIMARY KEY (id),
-    FOREIGN KEY (cog_id) REFERENCES college(id)
+    	FOREIGN KEY (cog_id) REFERENCES college(id)
 );
 
 CREATE TABLE professor (
@@ -19,7 +19,7 @@ CREATE TABLE professor (
 	phone_number varchar(100),
 	dept_id int(11) NOT NULL,
 	PRIMARY KEY (id),
-    FOREIGN KEY (dept_id) REFERENCES department(id)
+    	FOREIGN KEY (dept_id) REFERENCES department(id)
 );
 
 CREATE TABLE course (
@@ -28,7 +28,7 @@ CREATE TABLE course (
 	credit int(11) NOT NULL,
 	pro_id int(11) NOT NULL,
 	PRIMARY KEY (id),
-    FOREIGN KEY (pro_id) REFERENCES professor(id)
+    	FOREIGN KEY (pro_id) REFERENCES professor(id)
 );
 
 CREATE TABLE student (
@@ -48,7 +48,7 @@ CREATE TABLE student_select (
 	score int(11),
 	PRIMARY KEY (id),
 	FOREIGN KEY (std_id) REFERENCES student(id),
-    FOREIGN KEY (course_id) REFERENCES course(id)
+    	FOREIGN KEY (course_id) REFERENCES course(id)
 );
 
 
